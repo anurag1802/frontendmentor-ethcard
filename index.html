@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap');
+
+    :root {
+      --verydark-blue-main: hsl(217, 54%, 11%);
+      --verydark-blue-card: hsl(216, 50%, 16%);
+      --veredark-blue-line: hsl(215, 32%, 27%);
+      --white: hsl(0, 0%, 100%);
+      --soft-blue: hsl(215, 51%, 70%);
+      --cyan: hsl(178, 100%, 50%);
+    }
+  
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: var(--verydark-blue-main);
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .main-container {
+      width: 22vw;
+      padding: 20px;
+      background-color: var(--verydark-blue-card);
+      border-radius: 15px;
+    }
+
+    .equilibrium {
+      height: 100%;
+      width: 100%;
+      border-radius: 15px;
+    }
+    .img-container:hover .img-hover{
+      opacity: 1;
+      cursor: pointer;
+    }
+    .user-avatar {
+      height: 36px;
+      width: 36px;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+    }
+
+    h2 {
+      color: var(--white);
+    }
+
+    p {
+      font-size: 18px;
+      color: var(--soft-blue);
+    }
+
+    .eth-amt {
+      color: var(--cyan);
+    }
+
+    p>span {
+      color: white;
+    }
+
+    .price,
+    .days {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--veredark-blue-line);
+    }
+
+    h4 {
+      color: var(--soft-blue);
+    }
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 20px;
+    }
+    .img-container{
+      position: relative;
+    }
+    .img-hover {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition:all .5 ease;
+      position: absolute;
+      background-color: hsla(178, 100%, 50%, 0.5);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px;
+      padding: 0px;
+    }
+    .img-container{
+      padding: 0;
+      margin: 0;
+    }
+
+    @media only screen and (max-width:375px){
+      .main-container{
+        width: 80vw;
+      }
+    }
+    @media only screen and (max-width:1440px){
+      .main-container{
+        width:25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main-container">
+
+    <div class="img-container">
+      <img src="images/image-equilibrium.jpg" class="equilibrium" alt="eth">
+      <div class="img-hover">
+        <img src="images/icon-view.svg" alt="eye">
+      </div>
+    </div>
+    <div class="userdetails">
+      <h2>Equilibrium #3429</h2>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="details">
+        <div class="price">
+          <img src="images/icon-ethereum.svg" alt="eth">
+          <h4 class="eth-amt">0.041 ETH</h4>
+        </div>
+        <div class="days">
+          <img src="images/icon-clock.svg" alt="clock">
+          <h4>3 days left</h4>
+        </div>
+      </div>
+      <div class="avatar">
+        <img src="images/image-avatar.png" class="user-avatar" alt="avatar">
+        <p>Creation of <span>Jules Wyvern</span></p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Equilibrium #3429
+
+  Our Equilibrium collection promotes balance and calm.
+
+  0.041 ETH
+
+  3 days left
+  
+  Creation of Jules Wyvern -->
+
+
+</body>
+
+</html>
